@@ -38,7 +38,7 @@
           {{subtitle}} +{{num}}
         </h3>
       </hgroup>
-      <div [hidden]="isSocialIconsHidden" id="social-icons" class="pull-right social-icon">
+      <div *ngIf="num%2 == 1" [hidden]="isSocialIconsHidden" id="social-icons" class="pull-right social-icon">
         <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
           <img src="/assets/images/facebook.png">
         </a>
