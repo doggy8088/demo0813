@@ -32,8 +32,8 @@
             {{title}}
           </a>
         </h1>
-        <h3 [innerHTML]="subtitle">
-
+        <h3 (click)="plusOne($event)">
+          {{subtitle}} +{{num}}
         </h3>
       </hgroup>
       <div [hidden]="isSocialIconsHidden" id="social-icons" class="pull-right social-icon">
