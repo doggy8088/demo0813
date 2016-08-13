@@ -35,7 +35,7 @@
         <h3 [ngClass]="{'subtitle': num%2==1}"
             [ngStyle]="getStyle()"
             (click)="plusOne($event)">
-          {{subtitle}} +{{num}}
+          {{subtitle}} +{{num}} ( {{test}} )
         </h3>
       </hgroup>
       <div *ngIf="num%2 == 1" [hidden]="isSocialIconsHidden" id="social-icons" class="pull-right social-icon">

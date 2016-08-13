@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +6,15 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['header.component.css'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnChanges {
 
   @Input()
   title: string;
   @Input()
   titleurl: string;
+
+  @Input()
+  test: string;
 
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
   subtitle_bgcolor = 'yellow';
@@ -23,6 +26,10 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    console.log(this.test);
   }
 
   plusOne($event: MouseEvent) {
