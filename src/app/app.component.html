@@ -8,7 +8,7 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <article class="post" id="post0" *ngFor="let item of data">
+        <article class="post" id="post{{i}}" *ngFor="let item of data; let i=index;">
           <header class="post-header">
             <h2 class="post-title">
                 <a [href]="item.href">{{item.title}}</a>
@@ -47,7 +47,7 @@
         <!-- Search END -->
 
 <div [ngSwitch]="keyword">
-  <div *ngSwitchWhen="'1'">
+  <div *ngSwitchCase="'1'">
 
 
         <!-- Calendar START -->
@@ -145,7 +145,7 @@
         <!-- Calendar END -->
 
   </div>
-  <div *ngSwitchWhen="'2'">
+  <div *ngSwitchCase="'2'">
 
         <!-- CategoryList START -->
         <div class="widget categorylist" id="widgetdd0a6215-8f33-441e-83c8-9f2ae0abae27">
@@ -174,7 +174,7 @@
         <!-- CategoryList END -->
 
   </div>
-  <div *ngSwitchWhen="'3'">
+  <div *ngSwitchCase="'3'">
 
         <!-- MVP START -->
         <div class="widget textbox" id="widget19ed939d-5473-4e01-a622-0121a939c9b2">
