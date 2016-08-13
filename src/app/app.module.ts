@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { NTDollarsPipe } from './ntdollars.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, SearchComponent
+    AppComponent, HeaderComponent, SearchComponent, NTDollarsPipe
   ],
   imports: [
     BrowserModule,
