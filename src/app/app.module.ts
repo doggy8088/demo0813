@@ -9,6 +9,8 @@ import { NTDollarsPipe } from './ntdollars.pipe';
 
 import { SearchService } from './search.service';
 
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, SearchComponent, NTDollarsPipe
@@ -16,7 +18,8 @@ import { SearchService } from './search.service';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [SearchService],
   entryComponents: [AppComponent],
