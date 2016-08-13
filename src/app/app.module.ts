@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { NTDollarsPipe } from './ntdollars.pipe';
 
+import { SearchService } from './search.service';
+
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, SearchComponent, NTDollarsPipe
@@ -16,7 +18,7 @@ import { NTDollarsPipe } from './ntdollars.pipe';
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SearchService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })

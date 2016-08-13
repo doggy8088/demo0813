@@ -1,4 +1,5 @@
 import { Component, OnInit, OnChanges, Input, ViewEncapsulation } from '@angular/core';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +24,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 
   num = 10;
 
-  constructor() { }
+  constructor(private searchSvc: SearchService) { }
 
   ngOnInit() {
   }
