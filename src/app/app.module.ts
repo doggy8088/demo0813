@@ -10,10 +10,11 @@ import { NTDollarsPipe } from './ntdollars.pipe';
 import { SearchService } from './search.service';
 
 import { HttpModule } from '@angular/http';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, SearchComponent, NTDollarsPipe
+    AppComponent, HeaderComponent, SearchComponent, NTDollarsPipe, ArticleComponent
   ],
   imports: [
     BrowserModule,
