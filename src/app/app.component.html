@@ -34,17 +34,11 @@
     <aside class="col-md-4 sidebar-wrapper">
       <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone">
 
-        <!-- Search START-->
-        <div class="widget search" id="widgetfb38ecdd-5813-4d10-8c5f-8d901c7c731e">
-          <div class="widget-content">
-              <div id="searchbox">
-                <label for="txt-fb38ecdd-5813-4d10-8c5f-8d901c7c731e" style="display:none">Search</label>
-      <input type="text" #keywordInput (keyup.enter)="doSearch(keywordInput.value)" placeholder="請輸入搜尋關鍵字" accesskey="s"><input type="button" value="搜尋" id="searchbutton" (click)="doSearch(keywordInput.value)">
-      {{keyword}}
-              </div>
-          </div>
-        </div>
-        <!-- Search END -->
+        {{test}}
+
+        <app-search
+          [keyword]="keyword_default"
+          (search)="test=$event"></app-search>
 
 <div [ngSwitch]="keyword">
   <div *ngSwitchCase="'1'">
