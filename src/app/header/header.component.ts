@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   titleurl = 'http://blog.miniasp.com/';
 
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
+  subtitle_bgcolor = 'yellow';
 
   isSocialIconsHidden = false;
 
@@ -30,6 +31,10 @@ export class HeaderComponent implements OnInit {
       this.num++;
     }
 
+  }
+
+  getStyle() {
+    return {'background-color': this.subtitle_bgcolor};
   }
 
 }

@@ -32,7 +32,9 @@
             {{title}}
           </a>
         </h1>
-        <h3 (click)="plusOne($event)">
+        <h3 [ngClass]="{'subtitle': num%2==1}"
+            [ngStyle]="getStyle()"
+            (click)="plusOne($event)">
           {{subtitle}} +{{num}}
         </h3>
       </hgroup>
